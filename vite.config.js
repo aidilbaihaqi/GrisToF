@@ -36,7 +36,7 @@ export default defineConfig({
                     theme: {
                         extend: {
                             fontFamily: {
-                                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                                sans: ['Roboto', ...defaultTheme.fontFamily.sans],
                             },
                             borderRadius: {
                                 lg: 'var(--radius)',
@@ -87,7 +87,7 @@ export default defineConfig({
                             }
                         }
                     },
-                    plugins: [forms, tailwindAnimate],
+                    plugins: [forms, tailwindAnimate, require('@tailwindcss/typography')],
                 }),
                 autoprefixer,
             ],
