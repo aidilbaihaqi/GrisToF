@@ -4,6 +4,9 @@ namespace App\Models;
 
 use App\Enums\WorkspaceVisibility;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Workspace extends Model
 {
@@ -20,5 +23,18 @@ class Workspace extends Model
         return [
             'visibility' => WorkspaceVisibility::class
         ];
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function cards(): HasMany
+    {
+        return $this->hasMany(Card::class);
+    }
+    public function members(): MorphMany
+    {
+        return $this->morphMany(Member::class, 'membereable');
     }
 }
