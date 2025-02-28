@@ -20,3 +20,7 @@ export const PRIORITY = {
   LOW: 'Low',
   UNKNOWN: 'UNKNOWN'
 }
+
+export function flashMessage(params) {
+  return params.props.flash_message;
+}
