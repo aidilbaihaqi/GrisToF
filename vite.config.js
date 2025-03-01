@@ -7,6 +7,7 @@ import autoprefixer from 'autoprefixer';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import tailwindAnimate from 'tailwindcss-animate';
+import typography from '@tailwindcss/typography'
 
 export default defineConfig({
     plugins: [
@@ -87,7 +88,7 @@ export default defineConfig({
                             }
                         }
                     },
-                    plugins: [forms, tailwindAnimate, require('@tailwindcss/typography')],
+                    plugins: [forms, tailwindAnimate, typography],
                 }),
                 autoprefixer,
             ],
