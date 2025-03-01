@@ -36,8 +36,8 @@ export default function Login({ status, canResetPassword }) {
                             <Link href="/" className="text-4xl font-black leading-relaxed tracking-tighter">
                                 GrisToF<span className="text-red-500">.</span>
                             </Link>
-                            <h2 className="text-lg font-medium leading-relaxed tracking-tight text-left text-muted-foreground">
-                                Sign in to your account
+                            <h2 className="text-md font-medium leading-relaxed tracking-tight text-left text-muted-foreground">
+                                To-Do List, Notes, and Financial Management App
                             </h2>
                         </CardHeader>
                         <CardContent>
@@ -63,16 +63,6 @@ export default function Login({ status, canResetPassword }) {
                                     <div>
                                         <div className='flex items-center justify-between'>
                                             <InputLabel htmlfor='password' value='Password' />
-                                            {canResetPassword && (
-                                                <div className='text-sm'>
-                                                    <Link
-                                                        href='#'
-                                                        className='font-semibold text-red-500 hover:text-red-600'
-                                                    >
-                                                        Forgot your password
-                                                    </Link>
-                                                </div>
-                                            )}
                                         </div>
                                         <div>
                                             <TextInput 
